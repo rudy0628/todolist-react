@@ -1,0 +1,58 @@
+.todo__item {
+	background-color: #74c0fc;
+	padding: 1rem;
+	border-radius: 11px;
+	display: flex;
+	align-items: center;
+}
+
+.todo__item:not(:last-child) {
+	margin-bottom: 2rem;
+}
+
+.todo__date {
+	padding: 1rem;
+	background-color: #eee;
+	border-radius: 11px;
+	margin-right: 1rem;
+	width: 18%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.todo__date .todo__date--day {
+	font-size: 3rem;
+}
+
+.todo__date span {
+	display: block;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.todo_title {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.todo__button-group {
+	margin-left: auto;
+}
+
+.todo__button-group button {
+	margin-left: 1rem;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+.todo__button-group button:hover .todo__icon {
+	color: #d0ebff;
+}
+
+.todo__icon {
+	width: 2rem;
+	height: 2rem;
+	transition: all 0.2s;
+}

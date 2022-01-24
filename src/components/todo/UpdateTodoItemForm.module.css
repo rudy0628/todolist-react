@@ -1,0 +1,14 @@
+.update-form {
+	width: 85%;
+	margin-right: 1rem;
+	padding: 1rem;
+}
+
+.update-form__btn {
+	background-color: #e7f5ff;
+}
+
+.update-form__error {
+	color: #f03e3e;
+	text-align: center;
+}

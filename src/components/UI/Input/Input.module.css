@@ -1,0 +1,35 @@
+.input {
+	margin-bottom: 2rem;
+}
+
+.input label {
+	display: block;
+	margin-bottom: 0.4rem;
+}
+
+.input input {
+	width: 100%;
+	padding: 1rem;
+	border-radius: 11px;
+	font-family: inherit;
+	font-size: inherit;
+	border: none;
+	margin-bottom: 1rem;
+}
+
+.invalid input {
+	background-color: #ffe3e3;
+	border-color: #c92a2a;
+}
+
+.input input:focus {
+	outline: 2px solid #5c7cfa;
+}
+
+.invalid input:focus {
+	outline: 2px solid #c92a2a;
+}
+
+.error-text {
+	color: #c92a2a;
+}

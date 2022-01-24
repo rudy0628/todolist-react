@@ -1,0 +1,37 @@
+.todo-form {
+	max-width: 60rem;
+	margin: 4rem auto;
+	padding: 2rem;
+	font-size: 1.6rem;
+}
+
+.todo-form form {
+	display: flex;
+	flex-direction: column;
+}
+
+.todo-form__btn-group {
+	display: flex;
+	align-self: flex-end;
+}
+
+.todo-form__btn {
+	background-color: #d0ebff;
+}
+
+.todo-form__btn:not(:last-of-type) {
+	margin-right: 1rem;
+}
+
+.todo-form__btn--open {
+	background-color: #74c0fc;
+	font-size: 1.8rem;
+	padding: 1.4rem 2.8rem;
+	display: block;
+	margin: 0 auto;
+}
+
+.todo-form__error {
+	color: #f03e3e;
+	text-align: center;
+}
