@@ -5,10 +5,27 @@
 }
 
 .update-form__btn {
+	background-color: #1c7ed6;
+	color: #e7f5ff;
+	transition: all 0.2s;
+}
+
+.update-form__btn:hover {
 	background-color: #e7f5ff;
+	color: #333;
 }
 
 .update-form__error {
 	color: #f03e3e;
 	text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+	.update-form__btn {
+		font-size: 1rem;
+	}
+
+	.update-form {
+		margin-right: 0rem;
+	}
 }

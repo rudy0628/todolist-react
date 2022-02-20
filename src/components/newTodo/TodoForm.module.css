@@ -1,8 +1,5 @@
 .todo-form {
-	max-width: 60rem;
-	margin: 4rem auto;
 	padding: 2rem;
-	font-size: 1.6rem;
 }
 
 .todo-form form {
@@ -16,22 +13,16 @@
 }
 
 .todo-form__btn {
-	background-color: #d0ebff;
+	background-color: #339af0;
+	color: #e7f5ff;
+	transition: all 0.2s;
 }
 
 .todo-form__btn:not(:last-of-type) {
 	margin-right: 1rem;
 }
 
-.todo-form__btn--open {
-	background-color: #74c0fc;
-	font-size: 1.8rem;
-	padding: 1.4rem 2.8rem;
-	display: block;
-	margin: 0 auto;
-}
-
-.todo-form__error {
-	color: #f03e3e;
-	text-align: center;
+.todo-form__btn:hover {
+	background-color: #e7f5ff;
+	color: #333;
 }

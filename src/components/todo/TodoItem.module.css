@@ -31,7 +31,7 @@
 	font-weight: 700;
 }
 
-.todo_title {
+.todo__title {
 	font-size: 2rem;
 	font-weight: 600;
 }
@@ -41,10 +41,13 @@
 }
 
 .todo__button-group button {
-	margin-left: 1rem;
 	border: none;
 	background: none;
 	cursor: pointer;
+}
+
+.todo__button-group button:not(:first-of-type) {
+	margin-left: 1rem;
 }
 
 .todo__button-group button:hover .todo__icon {
@@ -55,4 +58,29 @@
 	width: 2rem;
 	height: 2rem;
 	transition: all 0.2s;
+}
+
+@media only screen and (max-width: 600px) {
+	.todo__item {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.todo__date {
+		width: 40%;
+		margin-right: 0;
+		margin-bottom: 1.6rem;
+	}
+
+	.todo__button-group {
+		margin-right: auto;
+	}
+
+	.todo__title {
+		margin-bottom: 2rem;
+	}
+
+	.todo__button-group button {
+		margin-left: 0rem;
+	}
 }

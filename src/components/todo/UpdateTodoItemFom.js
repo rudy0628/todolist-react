@@ -1,10 +1,12 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Input from '../UI/Input/Input';
 import Button from '../UI/Button/Button';
 import useInput from '../../hooks/use-input';
+
 import { todoActions } from '../../store/todo-slice';
+import { modalActions } from '../../store/modal-slice';
 
 import classes from './UpdateTodoItemForm.module.css';
 
@@ -19,8 +21,9 @@ const UpdateTodoItemForm = props => {
 	const existItemIndex = todoItems.findIndex(item => item.id === props.id);
 	const existItem = todoItems[existItemIndex];
 
+	// default value on input
 	const todoDefaultValue = `${existItem.todo}`;
-	// yyyy-mm-dd
+	// transform format to yyyy-mm-dd
 	const dateDefaultValue = `${new Date(existItem.date)
 		.toISOString()
 		.slice(0, 10)}`;
@@ -51,7 +54,15 @@ const UpdateTodoItemForm = props => {
 	const submitHandler = e => {
 		e.preventDefault();
 
-		if (!formIsValid) return;
+		if (!formIsValid) {
+			dispatch(
+				modalActions.addModal({
+					title: 'Error',
+					message: 'Updated Todo Item Failed!',
+				})
+			);
+			return;
+		}
 
 		dispatch(
 			todoActions.updateItem({
@@ -60,6 +71,14 @@ const UpdateTodoItemForm = props => {
 				date: dateValue,
 			})
 		);
+
+		dispatch(
+			modalActions.addModal({
+				title: 'Success',
+				message: 'Updated Todo Item Success!',
+			})
+		);
+
 		// hide form
 		props.onHideForm();
 	};

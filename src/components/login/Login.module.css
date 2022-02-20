@@ -1,0 +1,51 @@
+.login-form {
+	padding: 2rem;
+}
+
+.login-form form {
+	display: flex;
+	flex-direction: column;
+}
+
+.login-form__title {
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.login-form__btn-group {
+	display: flex;
+	align-self: flex-end;
+	font-size: 1.4rem;
+}
+
+.login-form__btn {
+	background-color: #d0ebff;
+}
+
+.login-form__btn:not(:last-of-type) {
+	margin-right: 1rem;
+}
+
+.login-form__btn-change,
+.login-form__btn-forget {
+	display: block;
+	margin: 1rem auto 0;
+	font-size: 1.4rem;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.login-form__btn-change {
+	color: #339af0;
+}
+
+.login-form__btn-forget {
+	color: #e03131;
+}
+
+.error {
+	text-align: center;
+	margin-top: 1rem;
+	color: #e03131;
+}

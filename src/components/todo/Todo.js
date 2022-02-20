@@ -9,7 +9,6 @@ import classes from './Todo.module.css';
 const Todo = () => {
 	// const todoCtx = useContext(TodoContext);
 	const storeItems = useSelector(state => state.todo.todoItems);
-	console.log(storeItems);
 
 	// use todoItems to create components list
 	const todoItems = storeItems.map(item => (

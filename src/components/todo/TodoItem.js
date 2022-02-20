@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { todoActions } from '../../store/todo-slice';
+import { modalActions } from '../../store/modal-slice';
 
 import UpdateTodoItemForm from './UpdateTodoItemFom';
 
@@ -26,6 +27,13 @@ const TodoItem = props => {
 				id: props.id,
 			})
 		);
+
+		dispatch(
+			modalActions.addModal({
+				title: 'Success',
+				message: 'Deleted Todo Item Success!',
+			})
+		);
 	};
 
 	return (
@@ -45,7 +53,9 @@ const TodoItem = props => {
 					<span className={classes['todo__date--day']}>{props.day}</span>
 				</div>
 			)}
-			{!updateFormIsShow && <p className={classes.todo_title}>{props.title}</p>}
+			{!updateFormIsShow && (
+				<p className={classes.todo__title}>{props.title}</p>
+			)}
 			<div className={classes['todo__button-group']}>
 				{!updateFormIsShow && (
 					<button onClick={showFormHandler}>

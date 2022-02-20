@@ -1,0 +1,20 @@
+.welcome {
+	padding: 2rem;
+}
+
+.welcome__header {
+	margin-bottom: 1rem;
+}
+
+.welcome__main ul {
+	list-style: none;
+}
+
+.welcome__main li:first-of-type {
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+
+.welcome__main li:not(:last-of-type) {
+	margin-bottom: 1rem;
+}

@@ -17,9 +17,7 @@ const Input = React.forwardRef((props, ref) => {
 				onBlur={props.onBlur}
 				ref={ref}
 			/>
-			{props.isError && (
-				<p className={classes['error-text']}>Input must not be empty</p>
-			)}
+			{props.isError && <p className={classes['error-text']}>Invalid Input!</p>}
 		</div>
 	);
 });
